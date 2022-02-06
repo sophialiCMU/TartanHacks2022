@@ -5,7 +5,7 @@
 # Find out more about building applications with Shiny here:
 #
 #    http://shiny.rstudio.com/
-# p('Messages taken from "https://www.wishesmsg.com/inspirational-messages-quotes-students/"')   
+#
 motivation <- function(){
   messages = c("As a student the most important thing to remember is that laziness is your worst enemy and hard Work is your best friend.",
                "Study like there’s no tomorrow because if you keep putting off your studies for tomorrow, you’ll probably be too late.",
@@ -86,28 +86,24 @@ library(shiny)
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Push a button for a positive message"),
+    titlePanel("The Positivity Pick-Me-Up"),
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
         sidebarPanel(
-            # sliderInput("bins",
-            #             "Number of bins:",
-            #             min = 1,
-            #             max = 50,
-            #             value = 30),
-            
             div(
               h1("Here's something to keep you going"),
               p("Sometimes you just need a little pick-me-up or a great start to the day."),
-              p('Messages taken from "https://www.wishesmsg.com/inspirational-messages-quotes-students/"')      
             ),
             actionButton("submit", "Click for a Message"),
+            p("See of you get a message from CMU's own Randy Pausch!"),
+            p("“Never lose the childlike wonder. Show gratitude… Don’t complain; just work harder… Never give up.” – Randy Pausch"),
+            p(),
+            p('Messages taken from "https://www.wishesmsg.com/inspirational-messages-quotes-students/"'),  
             cellArgs = list(style='white-space: normal;')
             
         ),
-        # actionButton("ClickMe"),
-
+        
         # Show a plot of the generated distribution
         mainPanel(
            textOutput("default"),
@@ -118,10 +114,6 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-    website.lines = readLines("https://www.wishesmsg.com/inspirational-messages-quotes-students/")
-    # message.pattern = '"m">.+</>'
-    website.lines = grep('"m">.+</>', website.lines)
-    
     observeEvent(input$submit, {
       # numSamples = sample(1:3,1)
       output$default <- renderText(sample(motivation(), 1))
