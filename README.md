@@ -8,6 +8,7 @@ It's always good to take a break and find something good about the day. The Posi
 
 ## Here's a video of The Positivity Pick-Me-Up:
 Topic: TartanHacks 2022: The Positivity Pick-Me-Up
+
 Meeting Recording: [recording](https://cmu.zoom.us/rec/share/fbkHgx10grQK95MCfVVF1W_HoecQSmHeOjSIiVSFx_wafB4XHsBZWVoRyrVTY1-D.-UCmoTgJZDCjtFs8)
 
 Access Passcode: 5poX$B49
