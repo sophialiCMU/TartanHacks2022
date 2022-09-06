@@ -1,5 +1,5 @@
 # TartanHacks2022
-This Positivity Pick-Me-Up project utalized Oracle Cloud to create an RStudio server to run R shiny.
+This Positivity Pick-Me-Up project utalized Oracle Cloud to create an RStudio server to run an R shiny website.
 
 The code was edited on: http://129.153.188.109/
 The R website can be viewed here: https://sophialicmu.shinyapps.io/TartanHacks/
